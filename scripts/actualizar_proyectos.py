@@ -28,7 +28,7 @@ for repo in set(repos):
     fecha = obtener_ultimo_push(repo)
     contenido = re.sub(
       r'(\*\*\s*Última actualización\*\*:\s*).*<!-- AUTO:ultima-actualizacion -->.*',
-      f'**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion --> \\',
+      f'**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion --> ',
       contenido
       )
   except Exception as e:
