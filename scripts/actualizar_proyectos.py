@@ -29,9 +29,9 @@ for repo in repos:
     fecha = obtener_ultimo_push(repo)
     print('Ultima actualizacion:', fecha)
     contenido = re.sub(
-      repo + r'(.*)\*\*\s*Última actualización\*\*:\s*.*<!-- AUTO:ultima-actualizacion -->.*',
+      repo + r'(.*)\*\*\s*Última actualización\*\*:\s*).*<!-- AUTO:ultima-actualizacion -->.*',
       f'{repo}\1**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion --> ',
-      contenido
+      contenido, 1, re.DOTALL
       )
   except Exception as e:
     print(f'Aviso: no se pudo actualizar {repo}: {e}')
