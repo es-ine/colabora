@@ -31,5 +31,6 @@ SecCyL es una aplicación interactiva desarrollada en Shiny para identificar la 
 a una sección de referencia en la comunidad de Castilla y León, utilizando la distancia de Mahalanobis robusta
 (estimada con MCD) sobre variables del Censo 2021 transformadas y estandarizadas.
 
-**Última actualización**: <!-- AUTO:ultima-actualizacion --> \
-**Enlace aplicación**: [https://estrellasantos.shinyapps.io/SecCyL/](https://estrellasantos.shinyapps.io/SecCyL/)
+**Enlace aplicación**: [https://estrellasantos.shinyapps.io/SecCyL/](https://estrellasantos.shinyapps.io/SecCyL/) \
+**Última actualización**: <!-- AUTO:ultima-actualizacion --> 
+
