@@ -17,7 +17,7 @@ def obtener_ultimo_push(repo_path):
   with urllib.request.urlopen(req) as r:
     data = json.loads(r.read())
   pushed = data.get('pushed_at', '')[:10] # YYYY-MM-DD
-  pushed = re.sub(r'(\d{4})-(\d{2})-(\d{2})', r'\3-\2-\1') # DD-MM-YYYY
+  pushed = re.sub(r'(\d{4})-(\d{2})-(\d{2})', r'\3-\2-\1', pushed) # DD-MM-YYYY
   return pushed
 
 with open(ARCHIVO, 'r', encoding = 'utf-8') as f:
