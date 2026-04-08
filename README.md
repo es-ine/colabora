@@ -24,7 +24,7 @@ navegación por sitios externos o de la interacción con servicios ajenos a los 
 INEApy es una librería de Python diseñada para proporcionar acceso a los datos estadísticos del Instituto Nacional
 de Estadística (INE) de España a través de su API.
 
-**Última actualización**: 2025-06-25 <!-- AUTO:ultima-actualizacion --> 
+**Última actualización**: 06-04-2026 <!-- AUTO:ultima-actualizacion --> 
 
 ### [Buscador de Secciones Censales de Castilla y León](https://github.comestreesantos/SecCyL-TFG)
 SecCyL es una aplicación interactiva desarrollada en Shiny para identificar la sección censal más parecida
