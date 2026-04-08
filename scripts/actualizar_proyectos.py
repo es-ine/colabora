@@ -17,6 +17,7 @@ def obtener_ultimo_push(repo_path):
   with urllib.request.urlopen(req) as r:
     data = json.loads(r.read())
   pushed = data.get('pushed_at', '')[:10] # YYYY-MM-DD
+  pushed = re.sub(r'(\d{4})-(\d{2})-(\d{2})', r'\3-\2-\1') # DD-MM-YYYY
   return pushed
 
 with open(ARCHIVO, 'r', encoding = 'utf-8') as f:
@@ -28,10 +29,11 @@ for repo in repos:
   try:
     fecha = obtener_ultimo_push(repo)
     print('Ultima actualizacion:', fecha)
-    contenido = re.sub(
-      repo + r'(.*)\*\*\s*Última actualización\*\*:\s*).*<!-- AUTO:ultima-actualizacion -->.*',
-      f'{repo}\1**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion --> ',
-      contenido, 1, re.DOTALL
+    index = contenido.find(repo)
+    contenido[index:-1] = re.sub(
+      f'{repo}' + r'(.*)\*\*\s*Última actualización\*\*:\s*.*<!-- AUTO:ultima-actualizacion -->(.*)',
+      f'{repo}' + r'\1' + f'**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion -->' + r'\2',
+      contenido[index:-1], 1, re.DOTALL
       )
   except Exception as e:
     print(f'Aviso: no se pudo actualizar {repo}: {e}')
