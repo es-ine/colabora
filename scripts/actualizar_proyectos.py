@@ -30,7 +30,7 @@ for repo in repos:
     fecha = obtener_ultimo_push(repo)
     print('Ultima actualizacion:', fecha)
     index = contenido.find(repo)
-    contenido[index:-1] = re.sub(
+    contenido = contenido[:index-1] + re.sub(
       f'{repo}' + r'(.*)\*\*\s*Última actualización\*\*:\s*.*<!-- AUTO:ultima-actualizacion -->(.*)',
       f'{repo}' + r'\1' + f'**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion -->' + r'\2',
       contenido[index:-1], 1, re.DOTALL
