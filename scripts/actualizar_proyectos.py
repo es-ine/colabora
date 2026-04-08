@@ -16,7 +16,7 @@ def obtener_ultimo_push(repo_path):
                    'Accept':'application/vnd.github+json'})
   with urllib.request.urlopen(req) as r:
     data = json.loads(r.read())
-  pushed = data.get('name', '')[:10] # YYYY-MM-DD
+  pushed = data.get('pushed_at', '')[:10] # YYYY-MM-DD
   return pushed
 
 with open(ARCHIVO, 'r', encoding = 'utf-8') as f:
@@ -24,6 +24,7 @@ with open(ARCHIVO, 'r', encoding = 'utf-8') as f:
 
 repos = PATRON_URL.findall(contenido)
 for repo in set(repos):
+  print('Actualizando repositorio:', repo)
   try:
     fecha = obtener_ultimo_push(repo)
     contenido = re.sub(
