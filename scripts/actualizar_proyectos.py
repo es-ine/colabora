@@ -23,10 +23,11 @@ with open(ARCHIVO, 'r', encoding = 'utf-8') as f:
   contenido = f.read()
 
 repos = PATRON_URL.findall(contenido)
-for repo in set(repos):
+for repo in repos:
   print('Actualizando repositorio:', repo)
   try:
     fecha = obtener_ultimo_push(repo)
+    print('Ultima actualizacion:', fecha)
     contenido = re.sub(
       r'(\*\*\s*Última actualización\*\*:\s*).*<!-- AUTO:ultima-actualizacion -->.*',
       f'**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion --> ',
