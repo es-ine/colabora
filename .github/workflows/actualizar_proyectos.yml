@@ -1,0 +1,30 @@
+name: Actualizar metadatos de proyectos
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Todos los lunes a las 6:00 UTC
+  workflow_dispatch: # Permite ejecución manual
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        
+      - name: Actualizar fechas con la API de GitHub
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/actualizar_proyectos.py
+          
+      - name: Commit si hay cambios
+        run: |
+          git config user.name 'inedifusion'
+          git config user.email 'github.ine@ine.es'
+          git add README.md
+          git diff --cached --quiet || \
+          git commit -m 'chore: actualizar metadatos de proyectos [auto]'
+          git push
