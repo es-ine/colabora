@@ -31,9 +31,9 @@ for repo in repos:
     print('Ultima actualizacion:', fecha)
     index = contenido.find(repo)
     contenido = contenido[:index-1] + re.sub(
-      f'{repo}' + r'(.*)\*\*\s*Última actualización\*\*:\s*.*<!-- AUTO:ultima-actualizacion -->(.*)',
-      f'{repo}' + r'\1' + f'**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion -->' + r'\2',
-      contenido[index:-1], 1, re.DOTALL
+      r'\*\*\s*Última actualización\*\*:\s*.*<!-- AUTO:ultima-actualizacion -->',
+      f'**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion -->',
+      contenido[index:-1], 1
       )
   except Exception as e:
     print(f'Aviso: no se pudo actualizar {repo}: {e}')
