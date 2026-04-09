@@ -23,14 +23,14 @@ def obtener_ultimo_push(repo_path):
 with open(ARCHIVO, 'r', encoding = 'utf-8') as f:
   contenido = f.read()
 
-repos = PATRON_URL.findall(contenido)
+repos = list(set(PATRON_URL.findall(contenido)))
 for repo in repos:
   print('Actualizando repositorio:', repo)
   try:
     fecha = obtener_ultimo_push(repo)
     print('Ultima actualizacion:', fecha)
     index = contenido.find(repo)
-    contenido = contenido[:index] + re.sub(r'\*\*\s*Última actualización\*\*:\s*.*<!-- AUTO:ultima-actualizacion -->', f'**Última actualización**: {fecha} <!-- AUTO:ultima-actualizacion -->', contenido[index:], 1)
+    contenido = contenido[:index] + re.sub(r'\*\*\s*Última actualización(.*)\*\*:\s*.*<!-- AUTO:ultima-actualizacion -->', f'**Última actualización' + r'\1' + f'**: {fecha} <!-- AUTO:ultima-actualizacion -->', contenido[index:], 1)
   except Exception as e:
     print(f'Aviso: no se pudo actualizar {repo}: {e}')
     
