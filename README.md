@@ -9,7 +9,7 @@ desarrollo y los contenidos son responsabilidad exclusiva de sus autores. Su inc
 por lo tanto, desarrollo, validación, supervisión ni respaldo por parte del INE, tampoco supone ninguna
 responsabilidad por parte del INE en relación con la exactitud de sus contenidos, la disponibilidad y seguridad
 de la información, ni con el funcionamiento del proyecto o actualización de sus contenidos. El INE no ostenta
-relación jurídica alguna con los responsables de dichos proyectos.El INE declina cualquier responsabilidad relacionada
+relación jurídica alguna con los responsables de dichos proyectos. El INE declina cualquier responsabilidad relacionada
 con el software, herramientas o servicios proporcionados por terceros a los que se acceda a través de enlaces
 o referencias incluidos en esta página web. El acceso a dichos recursos externos se realiza bajo la exclusiva
 responsabilidad del usuario, quien deberá valorar sus condiciones de uso, licencias, políticas de privacidad
@@ -24,7 +24,8 @@ navegación por sitios externos o de la interacción con servicios ajenos a los 
 INEApy es una librería de Python diseñada para proporcionar acceso a los datos estadísticos del Instituto Nacional
 de Estadística (INE) de España a través de su API.
 
-**Última actualización**: 06-04-2026 <!-- AUTO:ultima-actualizacion --> 
+**Añadido a Colabora**: 09-04-2026 \
+**Última actualización realizada en [INEapy](https://github.com/Angel-RC/ineapy)**: 00-04-2026 <!-- AUTO:ultima-actualizacion --> 
 
 ### [Buscador de Secciones Censales de Castilla y León](https://github.com/estreesantos/SecCyL-TFG)
 SecCyL es una aplicación interactiva desarrollada en Shiny para identificar la sección censal más parecida
@@ -32,4 +33,5 @@ a una sección de referencia en la comunidad de Castilla y León, utilizando la 
 (estimada con MCD) sobre variables del Censo 2021 transformadas y estandarizadas.
 
 **Enlace aplicación**: [https://estrellasantos.shinyapps.io/SecCyL/](https://estrellasantos.shinyapps.io/SecCyL/) \
-**Última actualización**: 25-06-2025 <!-- AUTO:ultima-actualizacion --> 
+**Añadido a Colabora**: 09-04-2026 \
+**Última actualización realizada en [SecCyL](https://github.com/estreesantos/SecCyL-TFG)**: 00-06-2025 <!-- AUTO:ultima-actualizacion --> 
