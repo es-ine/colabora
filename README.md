@@ -25,7 +25,7 @@ INEApy es una librería de Python diseñada para proporcionar acceso a los datos
 de Estadística (INE) de España a través de su API.
 
 **Añadido a Colabora**: 09-04-2026 \
-**Última actualización realizada en [INEapy](https://github.com/Angel-RC/ineapy)**: 00-04-2026 <!-- AUTO:ultima-actualizacion --> 
+**Última actualización realizada en [INEapy](https://github.com/Angel-RC/ineapy)**: 06-04-2026 <!-- AUTO:ultima-actualizacion --> 
 
 ### [Buscador de Secciones Censales de Castilla y León](https://github.com/estreesantos/SecCyL-TFG)
 SecCyL es una aplicación interactiva desarrollada en Shiny para identificar la sección censal más parecida
@@ -34,4 +34,4 @@ a una sección de referencia en la comunidad de Castilla y León, utilizando la 
 
 **Enlace aplicación**: [https://estrellasantos.shinyapps.io/SecCyL/](https://estrellasantos.shinyapps.io/SecCyL/) \
 **Añadido a Colabora**: 09-04-2026 \
-**Última actualización realizada en [SecCyL](https://github.com/estreesantos/SecCyL-TFG)**: 00-06-2025 <!-- AUTO:ultima-actualizacion --> 
+**Última actualización realizada en [SecCyL](https://github.com/estreesantos/SecCyL-TFG)**: 25-06-2025 <!-- AUTO:ultima-actualizacion --> 
